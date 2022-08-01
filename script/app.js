@@ -50,6 +50,7 @@ function saveToStorage(bookAwesome){
 }
 
 // Events =>> Display Books
+
 // Events =>> Add a Books
 // Events =>> Remove a Books
 //
