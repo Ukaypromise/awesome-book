@@ -3,6 +3,7 @@ const titleInput = document.getElementById("title");
 const authorInput = document.getElementById("author");
 const addBtn = document.querySelector(".add-btn");
 const body = document.querySelector("body");
+const section = document.querySelector("section");
 
 // Array of objects containing books
 let books = [
@@ -30,7 +31,10 @@ function addBook(title, author) {
 // Remove Books
 function removeBook(title, author) {
   books = books.filter((book) => {
-    return book.title !== title && book.author !== author;
+    if ((book.title === title) && (book.author === author)) {
+      return false;
+    }
+    return true;
   });
 }
 // Store function (To handle storage)
@@ -40,33 +44,31 @@ const bookAwesome = {
   bookList: [],
 };
 // Saving To storage
-function saveToStorage(bookAwesome) {
-  bookAwesome.bookList = books;
+function saveToStorage() {
   bookAwesome.title = titleInput.value;
   bookAwesome.author = authorInput.value;
+  bookAwesome.bookList = books;
   const storeBooks = JSON.stringify(bookAwesome);
-  localStorage.setItem("bookAwesome", storeBooks);
+  localStorage.setItem("data", storeBooks);
 }
 
 // Events =>> Display Books Dynamically
 
-function loadcontent() {
-  const bookContainer = document.createElement("div");
-  body.appendChild(bookContainer);
-
-  bookContainer.className = "book-container";
+function loadContent() {
   const h1 = document.querySelector("h1");
-
-  if (bookContainer) {
-    body.removeChild(bookContainer);
+  const bookContainer = document.createElement("div");
+  bookContainer.className = "book-container";
+  // section.appendChild(bookContainer);
+  if (document.querySelector(".book-container")) {
+    section.removeChild(document.querySelector(".book-container"));
   }
 
-  for (let i = 0; i < books.length; i++) {
+  for (let i = 0; i < books.length; i ++) {
     const div = document.createElement("div");
     div.className = "outputItem";
     const p1 = document.createElement("p");
     p1.className = `book-title_${i}`;
-    p1.innerText = '"' + books[i].title + '"' + books[i].author;
+    p1.innerText = '"' + books[i].title + '" by ' + books[i].author;
     div.appendChild(p1);
 
     const button = document.createElement("button");
@@ -78,55 +80,55 @@ function loadcontent() {
   }
 
   h1.insertAdjacentElement("afterend", bookContainer);
-  const btnRemove = document.querySelectorAll(".btn-remove");
+  const btnRemove = document.querySelectorAll(`.btn-remove`);
   btnRemove.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       const title = document.querySelector(
-        `.book-title_${e.target.classList[0].substr(11)}`
+        `.book_title_${e.target.classList[0].substr(11)}`
       );
       const author = document.querySelector(
-        `.book-title_${e.target.classList[0].substr(11)}`
+        `.book_author_${e.target.classList[0].substr(11)}`
       );
-      removeBook(title.innerText, author.innerText);
+      bookAwesome.remove(title.innerText, author.innerText);
       saveToStorage();
-      loadcontent();
+      loadContent();
     });
   });
 }
 
 // Events =>> Add a Books
-addBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+addBtn.addEventListener("click", () => {
   addBook(titleInput.value, authorInput.value);
   saveToStorage();
-  loadcontent();
+  // loadContent();
 });
 
-loadcontent();
+loadContent();
 
 function loadFromStorage() {
-  const currentBook = JSON.parse(localStorage.getItem("bookAwesome"));
-  if (currentBook) {
-    books = currentBook.bookList;
-    titleInput.value = currentBook.title;
-    authorInput.value = currentBook.author;
-    loadcontent();
-  }
+  const currentBook = JSON.parse(localStorage.getItem("data"));
+  titleInput.value = currentBook.title;
+  authorInput.value = currentBook.author;
+  books = currentBook.bookList;
+  loadContent();
 }
 
-if (!localStorage.getItem("bookAwesome")) {
-  loadFromStorage();
+
+
+titleInput.addEventListener("input", () => {
+  saveToStorage();
+});
+
+authorInput.addEventListener("input", () => {
+  saveToStorage();
+});
+
+if (!localStorage.getItem("data")) {
+  saveToStorage();
 } else {
   loadFromStorage();
 }
 
-titleInput.addEventListener("input", (e) => {
-  saveToStorage();
-});
+loadContent();
 
-authorInput.addEventListener("input", (e) => {
-  saveToStorage();
-});
-
-// Events =>> Remove a Books
 //
