@@ -1,1 +1,88 @@
 /* Style Css */
+
+.books-section {
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: aquamarine;
+}
+
+.m-hr {
+  width: 30%;
+  border: 1px solid #000;
+}
+
+.m-h {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 1.5rem;
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+
+.book-wraper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  /* margin: 10px; */
+  width: 100%;
+}
+
+.book-wraper:nth-child(even) {
+  background-color: gray;
+}
+
+.books div:nth-child(odd) {
+  background-color: #fff9;
+}
+
+.remove-button {
+  border: 2px solid #000;
+  background-color: #f9f9f9;
+  padding: 5px 20px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #000;
+  margin: 10px;
+}
+
+.add-btn {
+  border: 2px solid #000;
+  background-color: #f9f9f9;
+  padding: 5px 20px;
+  margin-left: 120px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #000;
+  color: #fff;
+}

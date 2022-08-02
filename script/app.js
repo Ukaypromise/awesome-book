@@ -3,6 +3,13 @@ const inputTitle = document.getElementById('title');
 const inputAuthor = document.getElementById('author');
 const submitBtn = document.querySelector('.add-btn');
 const bookSection = document.querySelector('.books');
+
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+}
 class BookSet {
   // Constructor with array of books
   constructor(books = []) {
@@ -32,9 +39,9 @@ class BookSet {
     if (this) {
       const div = document.createElement('div');
       div.className = 'book-wraper';
-      div.innerHTML = `<h4>"${data.title}" by
+      div.innerHTML = `<h4 class="m-h">"${data.title}" by
                     ${data.author}</h4>
-                    <button data-value="${data.title}-${data.author}" type="button" class ="remove-button">Remove</button><hr />`;
+                    <button data-value="${data.title}-${data.author}" type="button" class ="remove-button">Remove</button>`;
       bookSection.appendChild(div);
     }
   }
@@ -55,12 +62,6 @@ class BookSet {
 }
 
 // Book Constructor function (representing a book).
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-}
 
 const coll = new BookSet();
 if (localStorage.getItem('bookItems')) {
