@@ -6,6 +6,12 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
+  background-color: aquamarine;
+}
+
+.m-hr {
+  width: 30%;
+  border: 1px solid #000;
 }
 
 .books {
@@ -15,14 +21,15 @@
   align-items: center;
   width: 100%;
   border: 2px solid #000;
+  background-color: #fff;
 }
 
 .book-wraper {
-  width: 95%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10px;
+  margin: 10px;
+  width: 80%;
 }
 
 .books div:nth-child(odd) {
