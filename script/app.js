@@ -34,7 +34,7 @@ class BookSet {
       div.className = 'book-wraper';
       div.innerHTML = `<h4>"${data.title}" by
                     ${data.author}</h4>
-                    <button data-value="${data.title}-${data.author}" type="button" class ="remove-button">Remove</button><hr />`;
+                    <button data-value="${data.title}-${data.author}" type="button" class ="remove-button">Remove</button>`;
       bookSection.appendChild(div);
     }
   }
