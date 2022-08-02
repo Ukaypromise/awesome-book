@@ -1,1 +1,36 @@
 /* Style Css */
+
+.books-section {
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 2px solid #000;
+}
+
+.book-wraper {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.books div:nth-child(odd) {
+  background-color: #fff9;
+}
+
+.remove-button {
+  border: 2px solid #000;
+  background-color: #f9f9f9;
+  padding: 0 20px;
+}
