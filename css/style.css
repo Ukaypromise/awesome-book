@@ -7,18 +7,19 @@
   display: flex;
   flex-direction: column;
   background-color: aquamarine;
-
 }
 
 .m-hr {
   width: 30%;
   border: 1px solid #000;
 }
-.m-h{
-    font-size: 20px;
-    font-weight: bold;
-    margin-left: 1.5rem ;
+
+.m-h {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 1.5rem;
 }
+
 .books {
   display: flex;
   flex-direction: column;
@@ -33,16 +34,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
   /* margin: 10px; */
   width: 100%;
- 
 }
 
 .book-wraper:nth-child(even) {
-   background-color: gray;
+  background-color: gray;
 }
-
-
 
 .books div:nth-child(odd) {
   background-color: #fff9;
@@ -53,25 +52,37 @@
   background-color: #f9f9f9;
   padding: 5px 20px;
   margin: 15px;
+  cursor: pointer;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.remove-button:hover {
+  background-color: #000;
+  color: #fff;
 }
 
-input{
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #000;
-    margin: 10px;
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.add-btn{
-    border: 2px solid #000;
-    background-color: #f9f9f9;
-    padding: 5px 20px;
-    margin-left: 120px;
+input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #000;
+  margin: 10px;
+}
+
+.add-btn {
+  border: 2px solid #000;
+  background-color: #f9f9f9;
+  padding: 5px 20px;
+  margin-left: 120px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #000;
+  color: #fff;
 }

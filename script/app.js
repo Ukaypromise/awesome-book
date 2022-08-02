@@ -63,7 +63,6 @@ class BookSet {
 
 // Book Constructor function (representing a book).
 
-
 const coll = new BookSet();
 if (localStorage.getItem('bookItems')) {
   const localBooks = JSON.parse(localStorage.getItem('bookItems'));
