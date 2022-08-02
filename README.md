@@ -46,8 +46,14 @@ npx stylelint "**/*.{css,scss}"
 - LinkedIn: [@promiseuka](https://www.linkedin.com/in/promiseuka)
 
 👤 **Abdulrahman Nganje**
--GitHub: https://github.com/asnganje
--LinkedIn: https://www.linkedin.com/in/abdulrahman-nganje-a6436935/
+- GitHub: [Abdulrahman Nganje](https://github.com/asnganje)
+- LinkedIn: [Abdulrahman Nganje](https://www.linkedin.com/in/abdulrahman-nganje-a6436935/)
+
+👤 **Rebaz Farid**
+
+- GitHub: [@Rebaz Farid](https://github.com/rebaz36)
+- Twitter: [@Rebaz Farid](https://twitter.com/rebaz415)
+- LinkedIn: [@Rebaz Farid](https://www.linkedin.com/in/rebazf/)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
