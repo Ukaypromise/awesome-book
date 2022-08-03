@@ -1,44 +1,12 @@
 /* Style Css */
 
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  background-color: #f4511e;
-  overflow: hidden;
-}
-
-.book-list {
+.books-section {
   padding: 30px;
   align-items: center;
   justify-content: center;
   display: flex;
   flex-direction: column;
   background-color: aquamarine;
-}
-
-.add-books {
-  padding: 30px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  background-color: aquamarine;
-}
-
-.contact-section {
-  padding: 30px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  background-color: aquamarine;
-}
-
-.footer-section {
-  background-color: #f4511e;
-  padding: 10px;
-  text-align: center;
 }
 
 .m-hr {
@@ -117,4 +85,69 @@ input {
 .add-btn:hover {
   background-color: #000;
   color: #fff;
+}
+
+.books-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  border: 2px solid black;
+}
+
+.book-nav {
+  border-right: 2px solid black;
+  padding: 6px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  width: 20%;
+  justify-content: space-between;
+}
+
+.booksUl > li:last-child {
+  border-right: none;
+  padding-right: 1vh;
+}
+
+.visit-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: aquamarine;
+}
+
+.contactUs {
+  border: 2px solid whitesmoke;
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contactUl {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-left: 140px;
+}
+
+.contactLi {
+  text-align: left;
+  width: 100%;
+  padding: 0 10px;
+  list-style-type: square;
+}
+
+.contP {
+  font-size: 18px;
+  text-align: left;
+  padding: 2px 25px;
+}
+
+.hidden {
+  display: none;
 }
