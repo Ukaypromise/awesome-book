@@ -1,5 +1,10 @@
 /* Style Css */
 
+.navbar {
+  background-color: #f4511e;
+  overflow: hidden;
+}
+
 .book-list {
   padding: 30px;
   align-items: center;
@@ -16,6 +21,21 @@
   display: flex;
   flex-direction: column;
   background-color: aquamarine;
+}
+
+.conatct-section {
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: aquamarine;
+}
+
+.footer {
+  background-color: #f4511e;
+  padding: 10px;
+  text-align: center;
 }
 
 .m-hr {
