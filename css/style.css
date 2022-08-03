@@ -101,6 +101,7 @@ input {
   min-width: 4rem;
   cursor: pointer;
 }
+
 .book-nav:hover {
   background-color: #000;
   color: #fff;

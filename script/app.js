@@ -70,6 +70,9 @@ if (localStorage.getItem('bookItems')) {
 submitBtn.addEventListener('click', () => {
   coll.add(new Book(inputTitle.value, inputAuthor.value));
 });
+
+// Navigation
+
 const dateVisit = document.querySelector('.userDate');
 dateVisit.innerHTML = new Date();
 const listLink = document.querySelector('.books');
