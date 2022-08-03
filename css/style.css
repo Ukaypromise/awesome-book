@@ -1,6 +1,9 @@
 /* Style Css */
 
 .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
   background-color: #f4511e;
   overflow: hidden;
 }
@@ -23,7 +26,7 @@
   background-color: aquamarine;
 }
 
-.conatct-section {
+.contact-section {
   padding: 30px;
   align-items: center;
   justify-content: center;
@@ -32,7 +35,7 @@
   background-color: aquamarine;
 }
 
-.footer {
+.footer-section {
   background-color: #f4511e;
   padding: 10px;
   text-align: center;
