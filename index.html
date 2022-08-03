@@ -8,21 +8,23 @@
     <title>Awesome Books</title>
   </head>
   <body>
-    <header class="navbar">
-      <nav>
-        <a href="index.html">List</a>
-        <a href="about.html">Add</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+    <header class="books-header">
+        <h3>Awesome Books</h3>
+        <ul class="booksUl">
+            <li class="book-nav">List</li>
+            <li class="book-nav">Add new</li>
+            <li class="book-nav">Contact</li>
+        </ul>
     </header>
-
-    <section class="book-list">
+    <div class="visit-date">
+        <p class="userDate"></p>
+    </div>
+    <section class="books-section">
       <h1>All Awesome Books</h1>
-      <div class="books"></div>
-    </section>
-
-    <section class="add-books">
+      <div class="books hidden"></div>
+      <br />
       <hr class="m-hr">
+      <div class="bookAdded hidden">
       <h1>Add a New Book</h1>
       <form>
         <input
@@ -40,84 +42,23 @@
           id="author"
           placeholder="Author"
           required
-        /><!DOCTYPE html>
-        <html lang="en">
-          <head>
-            <meta charset="UTF-8" />
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <link rel="stylesheet" href="./style.css" />
-            <title>Awesome Books</title>
-          </head>
-          <body>
-            <header class="books-header">
-                <h3>Awesome Books</h3>
-                <ul class="booksUl">
-                    <li class="book-nav">List</li>
-                    <li class="book-nav">Add new</li>
-                    <li class="book-nav">Contact</li>
-                </ul>
-            </header>
-            <div class="visit-date">
-                <p class="userDate"></p>
-            </div>
-            <section class="books-section">
-              <h1>All Awesome Books</h1>
-              <div class="books hidden"></div>
-              
-              <br />
-              <hr class="m-hr">
-              <div class="bookAdded hidden">
-              <h1>Add a New Book</h1>
-              <form>
-                <input
-                  type="text"
-                  name="title"
-                  id="title"
-                  placeholder="Title"
-                  required
-                />
-                <br />
-                <br />
-                <input
-                  type="text"
-                  name="author"
-                  id="author"
-                  placeholder="Author"
-                  required
-                />
-                <br /><br />
-                <button type="button" class="add-btn">Add Book</button>
-                <p></p>
-              </form>
-            </div>
-            <div class="contactUs hidden">
-                <h2>Contact information</h2>
-                <p class="contP">Do you have any question or you just want to say "Hello"?</p>
-                <p class="contP">You can reach out to us!</p>
-                <ul class="contactUl">
-                    <li class="contactLi">Our email: mail@mail.com</li>
-                    <li class="contactLi">Our phone number: 0043586534422</li>
-                    <li class="contactLi">Our address: Streetname 22 84503 City. Country</li>
-                </ul>
-            </div>
-            </section>
-            <script src="./myscript.js"></script>
-          </body>
-        </html>
-        
+        />
         <br /><br />
         <button type="button" class="add-btn">Add Book</button>
         <p></p>
       </form>
+    </div>
+    <div class="contactUs hidden">
+        <h2>Contact information</h2>
+        <p class="contP">Do you have any question or you just want to say "Hello"?</p>
+        <p class="contP">You can reach out to us!</p>
+        <ul class="contactUl">
+            <li class="contactLi">Our email: mail@mail.com</li>
+            <li class="contactLi">Our phone number: 0043586534422</li>
+            <li class="contactLi">Our address: Streetname 22 84503 City. Country</li>
+        </ul>
+    </div>
     </section>
-    <section class="contact-section">
-      contact section is here
-    </section>
-
-    <footer class="footer-section">
-      <p>&copy; 2020 Awesome Books</p>
-    </footer>
     <script src="./script/app.js"></script>
   </body>
 </html>

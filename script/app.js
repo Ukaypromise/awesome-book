@@ -3,7 +3,6 @@ const inputTitle = document.getElementById('title');
 const inputAuthor = document.getElementById('author');
 const submitBtn = document.querySelector('.add-btn');
 const bookSection = document.querySelector('.books');
-
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -60,9 +59,7 @@ class BookSet {
     localStorage.setItem('bookItems', JSON.stringify({ bookColl: this.books }));
   }
 }
-
 // Book Constructor function (representing a book).
-
 const coll = new BookSet();
 if (localStorage.getItem('bookItems')) {
   const localBooks = JSON.parse(localStorage.getItem('bookItems'));
@@ -70,40 +67,34 @@ if (localStorage.getItem('bookItems')) {
     coll.add(new Book(item.title, item.author));
   });
 }
-
 submitBtn.addEventListener('click', () => {
   coll.add(new Book(inputTitle.value, inputAuthor.value));
 });
-
 const dateVisit = document.querySelector('.userDate');
 dateVisit.innerHTML = new Date();
-
 const listLink = document.querySelector('.books');
 const booksAddition = document.querySelector('.bookAdded');
 const contactUs = document.querySelector('.contactUs');
 const navigator = document.querySelectorAll('.book-nav');
-
 navigator.forEach((n, index) => n.addEventListener('click', () => {
-    navigator.forEach((link, number) => {
-        if (number === index) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
-
-    if(index === 0) {
-        listLink.classList.remove('hidden');
-        booksAddition.classList.add('hidden');
-        contactUs.classList.add('hidden');
-    } else if(index == 1){
-        listLink.classList.add('hidden');
-        booksAddition.classList.remove('hidden');
-        contactUs.classList.add('hidden');
+  navigator.forEach((link, number) => {
+    if (number === index) {
+      link.classList.add('active');
     } else {
-        listLink.classList.add('hidden');
-        booksAddition.classList.add('hidden');
-        contactUs.classList.remove('hidden');
+      link.classList.remove('active');
     }
-})); 
-
+  });
+  if (index === 0) {
+    listLink.classList.remove('hidden');
+    booksAddition.classList.add('hidden');
+    contactUs.classList.add('hidden');
+  } else if (index === 1) {
+    listLink.classList.add('hidden');
+    booksAddition.classList.remove('hidden');
+    contactUs.classList.add('hidden');
+  } else {
+    listLink.classList.add('hidden');
+    booksAddition.classList.add('hidden');
+    contactUs.classList.remove('hidden');
+  }
+}));
