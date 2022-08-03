@@ -1,6 +1,15 @@
 /* Style Css */
 
-.books-section {
+.book-list {
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: aquamarine;
+}
+
+.add-books {
   padding: 30px;
   align-items: center;
   justify-content: center;
