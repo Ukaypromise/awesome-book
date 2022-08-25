@@ -1,6 +1,5 @@
 # Awesome books
-
->"Awesome books" is a simple website that displays a list of books and allows you to add and remove books from that list. 
+"Awesome books" is a simple website that displays a list of books and allows you to add and remove books from that list. 
 This Project will manage book collection using plain JS with objects. with this application, books can be added and removed.
 
 ## Built With
